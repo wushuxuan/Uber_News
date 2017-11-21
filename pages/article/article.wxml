@@ -1,0 +1,23 @@
+<!--pages/article/article.wxml-->
+<view class="container {{stopoverflow?'yesstopoverflow':''}}" style="background:#fff;">
+  <view class="articlecontent">
+    <view class="flex-content">
+      <image style='width:100%;' mode='widthFix' src="{{list.img_oss}}"></image>
+    </view>
+    <view class="free-title">{{list.title}}</view>
+    <view class="content">
+      <text>{{list.content}}</text>
+    </view>
+    <view class="zone">
+      <button class='flex-wrap' bindtap='zan'><text style="color:#f00" class="iconfont icon-back"></text></button>
+      <button class='flex-wrap' bindtap='toback'><text class="iconfont icon-toback"></text></button>
+      <button class='flex-wrap' open-type='share'><text style="color:#00C777;" class="iconfont icon-share"></text></button>
+    </view>
+  </view>
+</view>
+
+
+ <view wx:if="{{wshare == 1}}" style="z-index:1000" class='whshare1'>
+    <button open-type='share'  class='whshare2'></button>
+     <image src="../../images/fenxiang.png" class='whshare3' ></image>
+</view>

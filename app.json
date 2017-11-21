@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/information/information",
+    "pages/article/article",
+    "pages/Video/Video",
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/information/information",
+        "text": "嘀友资讯",
+        "iconPath": "images/tabBar/information.png",
+        "selectedIconPath": "images/tabBar/information1.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "嘀友租车",
+        "iconPath": "images/tabBar/personal1.png",
+        "selectedIconPath": "images/tabBar/personal.png"
+      }
+    ],
+    "color": "#000",
+    "selectedColor": "#48c23d"
+  }
+}

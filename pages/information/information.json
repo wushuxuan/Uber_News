@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "嘀友资讯",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "#000",
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,155 @@
+/* pages/article/article.wxss */
+.articlecontent{
+  width:100%;
+  background:#fff;
+}
+.flex-content{
+  width:100%;
+}
+.free-title{
+  width:98;
+  padding:2% 1%;
+  font-size:22px;
+  font-weight: bold;
+  color:#000;
+  margin-bottom:10px;
+}
+
+ /*内容*/
+ .content{
+   width:98%;
+   font-size:18px;
+   padding:2% 1%;
+   color:#000;
+   margin-bottom:15%;
+   line-height: 25px;
+ }
+/*专区*/
+.zone{
+  width:100%;
+  padding:1% 0;
+  display:flex;
+  flex-flow: row;
+  color:#000;
+  font-size:20px;
+  position: fixed;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  background:#fff;
+  border-top:1px solid #eee;
+}
+.zone button{
+  display: inline-block;
+  width:50%;
+  color:#000;
+  background:#fff;
+  padding:0px !important;
+}
+.zone button text{
+  font-size:20px;
+}
+
+.zone button::after{
+  border:none;
+}
+.zanfirst-icon{
+  font-size:10px;
+  display:inline-block;
+  margin-left:5px;
+  color:red;
+}
+ /*评论*/
+ .pinglun{
+   width:100%;
+   padding-bottom:5px;
+   border-top:2px solid #eee;
+ }
+ .pingluntitle{
+   width:95%;
+   font-size:12px;
+   margin:10px auto 10px;
+   display:flex;
+   flex-flow: row;
+ }
+  .pingluntitle>view{
+    width:50%;
+    display: inline-block
+  }
+  .pingluntitle>view:nth-child(2){
+    text-align: right;
+     font-size:12px;
+  }
+ .pinglun .flex-wrap{
+   width:93%;
+   margin-left:7%;
+   display: flex;
+   flex-flow: row;
+   margin-bottom:3%;
+ }
+  .pinglun .flex-wrap image{
+    width:30px;
+  }
+.pinglun .flex-wrap .left{
+  width:90%;
+  display: flex;
+  flex-flow: column;
+}
+.pinglun .flex-wrap .left .top{
+  width:96%;
+  margin:0 2%;
+  display: flex;
+  flex-flow: row;
+}
+.pinglun .flex-wrap .left .top>view{
+  width:50%;
+  display: inline-block;
+}
+.pinglun .flex-wrap .left .top>view:nth-child(1){
+    font-size:11px;
+}
+.pinglun .flex-wrap .left .top>view:nth-child(2){
+  text-align: right;
+  font-size:12px;
+}
+.pinglun .flex-wrap .left .bottom{
+  font-size:11px;
+  margin-left:10px;
+}
+
+/*添加评论*/
+.addpinglun{
+  width:100%;
+  height:45px;
+  line-height: 45px;
+  background: #fff;
+  position: fixed;
+  bottom:0px;
+}
+.addpinglun input{
+  display: inline-block;
+  width:69%;
+  padding-left:1%;
+  height:45px;
+  line-height: 45px;
+  background: #fff;
+  border-top:1px solid #eee;
+}
+.addpinglun button{
+  display: inline-block;
+  width:30%;
+  height:45px;
+  line-height: 45px;
+  background: red;
+  color: #fff;
+  border-radius:0px;
+}
+.addpinglun button::after{
+  border:none;
+}
+.bian{
+  color:red;
+}
+.bubian{
+  color:#bfbfbf;
+}

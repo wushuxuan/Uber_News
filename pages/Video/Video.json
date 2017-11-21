@@ -1,0 +1,8 @@
+{
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "网约车咨询精选",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "#000",
+    "enablePullDownRefresh": true
+}

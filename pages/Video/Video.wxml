@@ -1,0 +1,34 @@
+ <!--pages/Video/Video.wxml-->
+<view class="container"  style="background:#fff;">
+  <view class="free-panel">
+    <view  data-id='{{list.id}}' class="free-video-common" bindtap='playing'>
+      <video id="myVideo" autoplay="{{zidongbofang}}"  controls="true" poster="{{item.images}}" style="width:100%;"  src="{{onlineurl}}" poster="{{list.img_oss}}" objectFit="fill" enable-danmu="{{hidden}}" danmu-btn="true" bindplay='plays' bindpause='pause' bindended="stopplay">
+      <cover-view class="bofangview">
+        <cover-view data-id='{{list.id}}'  class="play" bindtap="playing">
+        <cover-image style="{{showplay?'':'display:none;'}}" data-id='{{list.id}}' src="../../images/play.png" bindtap="bofang"></cover-image>
+        </cover-view>
+       </cover-view>
+      </video>
+    </view>
+    <view class='wenzhang'>
+      <view class="free-title">{{list.title}}</view>
+      <view class="content">
+       {{list.content}}
+      </view>
+    <view class="zone">
+    <form bindsubmit="submit" report-submit='true'>
+      <button class='flex-wrap' bindtap='zan'><text style="color:#f00" class="iconfont icon-back"></text></button>
+      <button class='flex-wrap' bindtap='toback'><text class="iconfont icon-toback"></text></button>
+      <button class='flex-wrap'  form-type="submit" open-type='share'><text style="color:#00C777;" class="iconfont icon-share"></text></button>
+      </form>
+    </view>
+    </view>
+  </view>
+</view>
+
+
+
+ <view wx:if="{{wshare == 1}}" style="z-index:1000" class='whshare1'>
+    <button open-type='share'  class='whshare2'></button>
+     <image src="../../images/fenxiang.png" class='whshare3' ></image>
+</view>

@@ -1,0 +1,38 @@
+<!--pages/personal/personal.wxml-->
+<view class="page">
+  <view class="weui-tab__content" wx:for="{{newsList}}" wx:key="{{newsList}}">
+  <!--文章-->
+    <navigator class="flex-wrap" url='../article/article?id={{item.id}}' wx:if="{{item.format==1}}">
+      <view class="flex-content">
+        <image src="{{item.img_oss}}"></image>
+      </view>
+      <view class="flex-title">{{item.title}}</view>
+      <view class="flex-Introduction">{{item.content}}</view>
+    </navigator>
+
+  <!--视频-->
+    <view wx:if="{{item.format==0}}" class="flex-wrap">
+      <view data-id="{{item.id}}" class="flex-content" bindtap="playing">
+       <video data-id="{{item.id}}" id="Video{{item.id}}" controls="controls" poster="{{item.img_oss}}"
+       autoplay="{{item.id==id?zidongbofang:''}}"  src="{{item.id==id?onlineurl:''}}"  objectFit="fill" enable-danmu="{{hidden}}" danmu-btn="true">
+       <cover-view data-id="{{item.id}}" class="bofangview" bindtap="playing">
+        <cover-image data-id="{{item.id}}" 
+        style="{{item.id==id?'display:none;':''}}{{android}}" mode="widthFix" src="../../images/play.png" bindtap="playicon"></cover-image>
+       </cover-view>
+       </video>
+      </view>
+      <navigator  url='../Video/Video?id={{item.id}}' class="flex-title">{{item.title}}</navigator>
+      <navigator url='../Video/Video?id={{item.id}}' class="flex-Introduction">
+      {{item.content}}</navigator>
+    </view>
+
+  </view>
+</view>
+
+<!--
+<cover-view class="bofangview">
+        <cover-view data-index='{{item.id}}' class="play" bindtap="bofang">
+        <cover-image wx:if="{{item.id==num?'':'yincang'}}" data-num='{{item.id}}' style="{{showplay?'':'display:none;'}}" mode="widthFix" src="../../images/play.png" bindtap="xiaoshi"></cover-image>
+        </cover-view>
+       </cover-view>
+-->

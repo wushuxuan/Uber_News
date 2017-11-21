@@ -1,0 +1,107 @@
+/**app.wxss**/
+@import 'style/weui.wxss';
+page{
+    background-color: #F8F8F8;
+    font-size: 16px;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+.page{
+  width:100%;
+}
+.page__hd {
+    padding: 40px;
+}
+.page__bd {
+    padding-bottom: 40px;
+}
+.page__bd_spacing {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page__ft{
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.page__title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.page__desc {
+    margin-top: 5px;
+    color: #888888;
+    text-align: left;
+    font-size: 14px;
+}
+
+/*蒙层*/
+.Montmorillonitelayer{
+  width:100%;
+  height:100%;
+  position: fixed;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  left:0px;
+  z-index: 9000;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.Montmorillonitelayer-content{
+  width:95%;
+  position: fixed;
+  top:20%;
+  left:2.5%;
+  background:#fff;
+  border-radius: 10px;
+  z-index: 11000;
+}
+.Montmorillonitelayer-content input{
+  height:50px;
+  padding-left:5px;
+  line-height: 50px;
+}
+.Montmorillonitelayer-content button{
+  background:#fff;
+  border-top:1px solid #eee;
+  color:#48c23d;
+}
+.Montmorillonitelayer-content button::after{
+    border:none;
+}
+.yesstopoverflow{
+  overflow-y:hidden
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 463446 */
+  src: url('//at.alicdn.com/t/font_463446_qctryrqh3hyw4s4i.eot');
+  src: url('//at.alicdn.com/t/font_463446_qctryrqh3hyw4s4i.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_463446_qctryrqh3hyw4s4i.woff') format('woff'),
+  url('//at.alicdn.com/t/font_463446_qctryrqh3hyw4s4i.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_463446_qctryrqh3hyw4s4i.svg#iconfont') format('svg');
+}
+
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-dialogue:before { content: "\e603"; }/*评论量*/
+.icon-user:before { content: "\e602"; }/*用户*/
+.icon-read:before { content: "\e635"; }/*阅读量*/
+.icon-read:before { content: "\e635"; }/*商城icon*/
+.icon-zan:before { content: "\e60a"; }/*点赞icon*/
+.icon-zanfirst:before { content: "\e615"; }/*点赞icon*/
+.icon-addwrite:before { content: "\e66a"; }/*添加评论*/
+.icon-forwarding:before { content: "\e66d"; }/*转发*/
+.icon-back:before { content: "\e609"; }/**/
+.icon-share:before{ content:"\e63b"}/*分享*/
+.icon-toback:before{ content:"\e64d"}/*分享*/
