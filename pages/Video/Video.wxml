@@ -10,7 +10,7 @@
        </cover-view>
       </video>
     </view>
-    <view class='wenzhang'>
+    <view class='wenzhang' style="border:1px solid red;">
       <view class="free-title">{{list.title}}</view>
       <view class="content">
        {{list.content}}

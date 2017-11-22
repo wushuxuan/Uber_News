@@ -4,38 +4,77 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+   toindex:true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    var that = this
+    console.log(this.data.toindex)
+    if (this.data.toindex==true){
+      wx.navigateToMiniProgram({
+        appId: 'wx62feb25936195752',
+        path: 'pages/index/index',
+        extraData: {
+          foo: 'bar'
+        },
+        envVersion: 'release',
+        success(res) {
+          console.log(res)
+          that.setData({
+            toindex:false
+          })
+        }
+      })
+    }else{
+        wx.switchTab({
+          url: '../information/information',
+        })
+        that.setData({
+          toindex: true
+        })
+    }
+    console.log(this.data.toindex)
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+   
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    wx.navigateToMiniProgram({
-      appId: 'wx62feb25936195752',
-      path: 'pages/index/index',
-      extraData: {
-        foo: 'bar'
-      },
-      envVersion: 'release',
-      success(res) {
-        
-      }
-    })
+    var that = this
+    console.log(this.data.toindex)
+    if (this.data.toindex == true) {
+      wx.navigateToMiniProgram({
+        appId: 'wx62feb25936195752',
+        path: 'pages/index/index',
+        extraData: {
+          foo: 'bar'
+        },
+        envVersion: 'release',
+        success(res) {
+          console.log(res)
+          that.setData({
+            toindex: false
+          })
+        }
+      })
+    } else {
+      wx.switchTab({
+        url: '../information/information',
+      })
+      that.setData({
+        toindex: true
+      })
+    }
   },
 
   /**
